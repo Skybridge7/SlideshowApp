@@ -12,6 +12,11 @@
 		F90722CF1EC0A19C002B5D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90722CD1EC0A19C002B5D52 /* Main.storyboard */; };
 		F90722D11EC0A19C002B5D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90722D01EC0A19C002B5D52 /* Assets.xcassets */; };
 		F90722D41EC0A19C002B5D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90722D21EC0A19C002B5D52 /* LaunchScreen.storyboard */; };
+		F90722DC1EC0B54A002B5D52 /* 初夏.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F90722DB1EC0B54A002B5D52 /* 初夏.jpg */; };
+		F90722DE1EC0B55D002B5D52 /* 初秋.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F90722DD1EC0B55D002B5D52 /* 初秋.jpg */; };
+		F90722E01EC0B565002B5D52 /* 仲秋.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F90722DF1EC0B565002B5D52 /* 仲秋.JPG */; };
+		F90722E21EC0B572002B5D52 /* 冬.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F90722E11EC0B572002B5D52 /* 冬.JPG */; };
+		F90722E41EC0CE91002B5D52 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90722E31EC0CE91002B5D52 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		F90722D01EC0A19C002B5D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F90722D31EC0A19C002B5D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F90722D51EC0A19C002B5D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90722DB1EC0B54A002B5D52 /* 初夏.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "初夏.jpg"; path = "../初夏.jpg"; sourceTree = "<group>"; };
+		F90722DD1EC0B55D002B5D52 /* 初秋.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "初秋.jpg"; path = "../初秋.jpg"; sourceTree = "<group>"; };
+		F90722DF1EC0B565002B5D52 /* 仲秋.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "仲秋.JPG"; path = "../仲秋.JPG"; sourceTree = "<group>"; };
+		F90722E11EC0B572002B5D52 /* 冬.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "冬.JPG"; path = "../冬.JPG"; sourceTree = "<group>"; };
+		F90722E31EC0CE91002B5D52 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +64,14 @@
 		F90722C81EC0A19C002B5D52 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				F90722DB1EC0B54A002B5D52 /* 初夏.jpg */,
+				F90722DD1EC0B55D002B5D52 /* 初秋.jpg */,
+				F90722DF1EC0B565002B5D52 /* 仲秋.JPG */,
+				F90722E11EC0B572002B5D52 /* 冬.JPG */,
 				F90722C91EC0A19C002B5D52 /* AppDelegate.swift */,
 				F90722CB1EC0A19C002B5D52 /* ViewController.swift */,
 				F90722CD1EC0A19C002B5D52 /* Main.storyboard */,
+				F90722E31EC0CE91002B5D52 /* ResultViewController.swift */,
 				F90722D01EC0A19C002B5D52 /* Assets.xcassets */,
 				F90722D21EC0A19C002B5D52 /* LaunchScreen.storyboard */,
 				F90722D51EC0A19C002B5D52 /* Info.plist */,
@@ -123,7 +138,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90722DE1EC0B55D002B5D52 /* 初秋.jpg in Resources */,
 				F90722D41EC0A19C002B5D52 /* LaunchScreen.storyboard in Resources */,
+				F90722E01EC0B565002B5D52 /* 仲秋.JPG in Resources */,
+				F90722E21EC0B572002B5D52 /* 冬.JPG in Resources */,
+				F90722DC1EC0B54A002B5D52 /* 初夏.jpg in Resources */,
 				F90722D11EC0A19C002B5D52 /* Assets.xcassets in Resources */,
 				F90722CF1EC0A19C002B5D52 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +157,7 @@
 			files = (
 				F90722CC1EC0A19C002B5D52 /* ViewController.swift in Sources */,
 				F90722CA1EC0A19C002B5D52 /* AppDelegate.swift in Sources */,
+				F90722E41EC0CE91002B5D52 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,7 @@
 				F90722DA1EC0A19C002B5D52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
