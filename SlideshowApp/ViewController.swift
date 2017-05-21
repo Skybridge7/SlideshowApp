@@ -3,7 +3,8 @@
 //  SlideshowApp
 //
 //  Created by Hiroko Narita on 2017/05/08.
-//  Copyright © 2017 Skybridge7. All rights reserved.
+//  Copyright © 2017 Skybridge7
+// All rights reserved.
 //
 
 import UIKit
@@ -16,7 +17,6 @@ class ViewController: UIViewController {
     let backButton = UIButton()
     let forwardButton = UIButton()
     let playStopButton = UIButton()
-    
     //タイマーの生成
     var timer: Timer?
     var timer_sec: Float = 0
@@ -32,15 +32,13 @@ class ViewController: UIViewController {
     // 画像の名前の配列
     let imageNameArray = ["初夏.jpg", "初秋.jpg", "仲秋.JPG", "冬.JPG"]
     
-    @IBAction func playStop( sender: Any) {
-        playStopButton.addTarget(self, action: #selector(updateTimer), for: .touchUpInside)
-        
+    @IBAction func playStop(_ sender: Any) {
         // 動作中のタイマーを1つに保つために、 timer が存在しない場合だけ、タイマーを生成して動作させる
         if self.timer == nil {
             timer = Timer(timeInterval: 2.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            timer?.fire()
         }
-        //ボタンのテキストをタップ時に変更する
-        playStopButton.setTitle("停止", for: [])
+        
         // ボタン無効化
         backButton.isEnabled = false
         forwardButton.isEnabled = false
@@ -49,10 +47,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        playStopButton.setTitle("再生する", for: UIControlState.normal)
-        playStopButton.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        // 押された時
-        playStopButton.setTitle("停止する", for: UIControlState.highlighted)
+        // ボタンを押していないときの設定
+        playStopButton.setTitle("再生する", for: .normal)
+        playStopButton.setTitleColor(UIColor.white, for: .normal)
+        // ボタンを押したときの設定
+        playStopButton.setTitle("停止する", for: .highlighted)
+        playStopButton.setTitleColor(UIColor.blue, for: .highlighted)
+           
         let image = UIImage(named:"初夏.jpg")
         imageView.image = image
     }
