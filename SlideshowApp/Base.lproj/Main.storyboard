@@ -63,7 +63,11 @@
                         <color key="backgroundColor" red="0.27831320918642405" green="0.47654147107330674" blue="0.81213568652849744" alpha="0.96520136443661975" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="5Ov-F9-ejA" id="5ST-Rv-az9"/>
+                        <outlet property="forwardButton" destination="mwn-PR-JVK" id="JQQ-Ua-F1Q"/>
                         <outlet property="imageView" destination="AXF-bi-bhF" id="nv5-xO-ycc"/>
+                        <outlet property="playStop" destination="uQN-jF-12P" id="st6-Bc-Cmy"/>
+                        <outlet property="playStopButton" destination="5Ov-F9-ejA" id="kmm-Ed-F9i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ege-Rg-iWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-782" y="179"/>
+            <point key="canvasLocation" x="-1106" y="134"/>
         </scene>
     </scenes>
     <resources>

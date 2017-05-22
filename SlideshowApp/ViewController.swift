@@ -11,24 +11,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var playStopButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var forwardButton: UIButton!
+
     @IBOutlet weak var imageView: UIImageView!
+    
     var dispImageNo = 0
-    // 部品の宣言
-    let backButton = UIButton()
-    let forwardButton = UIButton()
-    let playStopButton = UIButton()
     //タイマーの生成
     var timer: Timer?
     var timer_sec: Float = 0
     // Timerによって、一定の間隔で呼び出される関数
+    
     func updateTimer(timer: Timer)
     {
         // 表示している画像の番号を1増やす
         dispImageNo += 1
-        
         // 表示している画像の番号を元に画像を表示する
         displayImage()
     }
+
     // 画像の名前の配列
     let imageNameArray = ["初夏.jpg", "初秋.jpg", "仲秋.JPG", "冬.JPG"]
     
@@ -66,7 +68,6 @@ class ViewController: UIViewController {
     @IBAction func back(_ sender: Any) {
         // 表示している画像の番号を1減らす
         dispImageNo -= 1
-        
         // 表示している画像の番号を元に画像を表示する
         displayImage()
     }
