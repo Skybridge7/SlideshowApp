@@ -11,7 +11,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    /*
+     このボタンのStoryboardの紐付きが切れておりますので、設定し直してください。
+     */
     @IBOutlet weak var playStopButton: UIButton!
+    
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
 
@@ -32,13 +36,34 @@ class ViewController: UIViewController {
     }
 
     // 画像の名前の配列
+    // これはViewControllerプロパティなので上に持って来ましょう
     let imageNameArray = ["初夏.jpg", "初秋.jpg", "仲秋.JPG", "冬.JPG"]
     
     @IBAction func playStop(_ sender: Any) {
+        
         // 動作中のタイマーを1つに保つために、 timer が存在しない場合だけ、タイマーを生成して動作させる
+        // タイマーが起動しているかしていないか(厳密に言うとself.timerがnilかnilじゃないか)で再生/停止の制御をしている
         if self.timer == nil {
+            // つまり、この時画面の状態は 停止->再生へ
             timer = Timer(timeInterval: 2.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             timer?.fire()
+            
+            /*
+             ここで停止から再生への処理
+             しなければいけないことは 
+             1. 次へボタン、前へボタンの無効化
+             2. 再生ボタンのタイトルを「停止」へ
+            */
+        } else {
+            // つまり、この時画面の状態は 再生->停止へ
+            
+            /*
+             ここで停止から再生への処理
+             しなければいけないことは
+             1. timerの破棄処理(停止)
+             2. 次へボタン、前へボタンの有効化
+             3. 再生ボタンのタイトルを「再生」へ
+             */
         }
         
         // ボタン無効化
@@ -48,6 +73,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // このメソッドはその名の通り、viewがロードされた時に呼ばれるので、
+        // 初期設定になりますので、ボタンを押していない時の設定などはできません(する方法はありますが、今まで学んできたことを考えるとできないと考えた方が良いです)
+        
         // Do any additional setup after loading the view, typically from a nib.
         // ボタンを押していないときの設定
         playStopButton.setTitle("再生する", for: .normal)
@@ -55,7 +84,10 @@ class ViewController: UIViewController {
         // ボタンを押したときの設定
         playStopButton.setTitle("停止する", for: .highlighted)
         playStopButton.setTitleColor(UIColor.blue, for: .highlighted)
-           
+        
+        // これは以下に書き換えた方がいいですね。
+        // let image = UIImage(named: imageNameArray[dispImageNo])
+        // 理由としては、基本的に画像ファイル名を管理しているのはimageNameArrayということで住み分けができるため、要は画像変更したいなと思った時はそこを変更するだけで良いようにする
         let image = UIImage(named:"初夏.jpg")
         imageView.image = image
     }
